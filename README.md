@@ -22,10 +22,10 @@ JSON 编辑器
 
 ```bash
 # clone the project
-git clone   xxxxxxx
+git clone   https://github.com/xingyushu/BlockChainTest.git
 
 # enter the project directory
-cd vue-element-admin
+cd   BlockChainTest
 
 # install dependency
 npm install
