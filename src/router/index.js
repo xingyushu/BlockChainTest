@@ -80,20 +80,6 @@ export const constantRoutes = [
         meta: { title: '数据可视化', icon: 'dashboard', affix: true }
       }
     ]
-  },
-  {
-    path: '/profile',
-    component: Layout,
-    redirect: '/profile/index',
-    hidden: true,
-    children: [
-      {
-        path: 'index',
-        component: () => import('@/views/profile/index'),
-        name: 'Profile',
-        meta: { title: 'Profile', icon: 'user', noCache: true }
-      }
-    ]
   }
 ]
 
@@ -197,7 +183,7 @@ export const asyncRoutes = [
     children: [
       {
         path: 'https://datav.aliyuncs.com/share/1155434fa30b11a986fdeba2f3edd52c',
-        meta: { title: 'External Link', icon: 'link' }
+        meta: { title: '展示大屏', icon: 'link' }
       }
     ]
   },
