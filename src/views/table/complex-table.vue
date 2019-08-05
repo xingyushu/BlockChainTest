@@ -12,17 +12,14 @@
         <el-option v-for="item in sortOptions" :key="item.key" :label="item.label" :value="item.key" />
       </el-select>
       <el-button v-waves class="filter-item" type="primary" icon="el-icon-search" @click="handleFilter">
-        Search
+        搜索
       </el-button>
       <el-button class="filter-item" style="margin-left: 10px;" type="primary" icon="el-icon-edit" @click="handleCreate">
-        Add
+        新增
       </el-button>
       <el-button v-waves :loading="downloadLoading" class="filter-item" type="primary" icon="el-icon-download" @click="handleDownload">
-        Export
+        导出
       </el-button>
-      <el-checkbox v-model="showReviewer" class="filter-item" style="margin-left:15px;" @change="tableKey=tableKey+1">
-        reviewer
-      </el-checkbox>
     </div>
 
     <el-table
@@ -49,11 +46,6 @@
         <template slot-scope="{row}">
           <span class="link-type" @click="handleUpdate(row)">{{ row.title }}</span>
           <el-tag>{{ row.type | typeFilter }}</el-tag>
-        </template>
-      </el-table-column>
-      <el-table-column label="Tester" width="110px" align="center">
-        <template slot-scope="scope">
-          <span>{{ scope.row.author }}</span>
         </template>
       </el-table-column>
       <el-table-column v-if="showReviewer" label="Reviewer" width="110px" align="center">
@@ -97,7 +89,7 @@
       <el-form ref="dataForm" :rules="rules" :model="temp" label-position="left" label-width="70px" style="width: 400px; margin-left:50px;">
         <el-form-item label="用例" prop="type">
           <el-select v-model="temp.type" class="filter-item" placeholder="Please select">
-            <el-option v-for="item in calendarTypeOptions" :key="item.key" :label="item.display_name" :value="item.key" />
+            <el-option v-for="item in calendarTypeOptions" :key="item.key" :label="item.display_name" :value="item" />
           </el-select>
         </el-form-item>
         <el-form-item label="区块链" prop="type">
@@ -148,15 +140,15 @@ import Pagination from '@/components/Pagination' // secondary package based on e
 
 const calendarTypeOptions = [
   { key: 'BTC', display_name: 'BTCTest' },
-  { key: 'BTC', display_name: 'Helloworld' },
+  { key: 'ETH', display_name: 'Helloworld' },
   { key: 'ETH', display_name: 'Transaction' },
-  { key: 'BTC', display_name: 'Smallbank' },
+  { key: 'Fabric', display_name: 'Smallbank' },
   { key: 'BTC', display_name: 'Draw' },
   { key: 'BTC', display_name: 'benchmark' },
   { key: 'BTC', display_name: 'IOtest' },
   { key: 'BTC', display_name: 'TPStest' },
   { key: 'BTC', display_name: 'POWtest' },
-  { key: 'BTC', display_name: 'peerTest' },
+  { key: 'Fabric', display_name: 'peerTest' },
   { key: 'ETH', display_name: 'ETHtest' },
   { key: 'FB', display_name: 'FabricTest' },
   { key: 'IN', display_name: 'IronTest' }
@@ -293,7 +285,7 @@ export default {
       this.$refs['dataForm'].validate((valid) => {
         if (valid) {
           this.temp.id = parseInt(Math.random() * 100) + 1024 // mock a id
-          this.temp.author = 'vue-element-admin'
+          this.temp.author = 'vue'
           createArticle(this.temp).then(() => {
             this.list.unshift(this.temp)
             this.dialogFormVisible = false

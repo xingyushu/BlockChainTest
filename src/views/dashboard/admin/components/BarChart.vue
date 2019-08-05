@@ -62,7 +62,7 @@ export default {
         },
         xAxis: [{
           type: 'category',
-          data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+          data: ['二月', '三月', '四月', '五月', '六月', '七月', '八月'],
           axisTick: {
             alignWithLabel: true
           }
@@ -74,25 +74,25 @@ export default {
           }
         }],
         series: [{
-          name: 'pageA',
+          name: '公有链',
           type: 'bar',
           stack: 'vistors',
           barWidth: '60%',
-          data: [79, 52, 200, 334, 390, 330, 220],
+          data: [30, 20, 31, 54, 52, 40, 45],
           animationDuration
         }, {
-          name: 'pageB',
+          name: '私有链',
           type: 'bar',
           stack: 'vistors',
           barWidth: '60%',
-          data: [80, 52, 200, 334, 390, 330, 220],
+          data: [50, 32, 30, 50, 40, 50, 50],
           animationDuration
         }, {
-          name: 'pageC',
+          name: '联盟链',
           type: 'bar',
           stack: 'vistors',
           barWidth: '60%',
-          data: [30, 52, 200, 334, 390, 330, 220],
+          data: [40, 30, 30, 50, 70, 50, 50],
           animationDuration
         }]
       })

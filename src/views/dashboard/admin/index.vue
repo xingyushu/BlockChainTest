@@ -11,16 +11,19 @@
     <el-row :gutter="32">
       <el-col :xs="24" :sm="24" :lg="8">
         <div class="chart-wrapper">
+          <h6>性能概览</h6>
           <raddar-chart />
         </div>
       </el-col>
       <el-col :xs="24" :sm="24" :lg="8">
         <div class="chart-wrapper">
+          <h6>任务分布</h6>
           <pie-chart />
         </div>
       </el-col>
       <el-col :xs="24" :sm="24" :lg="8">
         <div class="chart-wrapper">
+          <h6>区块链类别</h6>
           <bar-chart />
         </div>
       </el-col>

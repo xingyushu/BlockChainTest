@@ -1,25 +1,41 @@
 <template>
   <el-card class="box-card-component" style="margin-left:8px;">
-    <div slot="header" class="box-card-header">
-      <img src="https://wpimg.wallstcn.com/e7d23d71-cf19-4b90-a1cc-f56af8c0903d.png">
-    </div>
     <div style="position:relative;">
-      <pan-thumb :image="avatar" class="panThumb" />
-      <mallki class-name="mallki-text" text="区块链测试系统" />
+      <mallki class-name="mallki-text" text="区块链测试进度" />
       <div style="padding-top:35px;" class="progress-item">
-        <span>BTC</span>
+        <span>Test1</span>
         <el-progress :percentage="70" />
       </div>
       <div class="progress-item">
-        <span>ETH</span>
+        <span>Test2</span>
         <el-progress :percentage="18" />
       </div>
       <div class="progress-item">
-        <span>Fabric</span>
-        <el-progress :percentage="12" />
+        <span>Test3</span>
+        <el-progress :percentage="65" />
       </div>
       <div class="progress-item">
-        <span>联盟链</span>
+        <span>Test4</span>
+        <el-progress :percentage="92" />
+      </div>
+      <div class="progress-item">
+        <span>Test5</span>
+        <el-progress :percentage="80" />
+      </div>
+      <div class="progress-item">
+        <span>Test6</span>
+        <el-progress :percentage="48" />
+      </div>
+      <div class="progress-item">
+        <span>Test7</span>
+        <el-progress :percentage="100" status="success" />
+      </div>
+      <div class="progress-item">
+        <span>Test8</span>
+        <el-progress :percentage="80" />
+      </div>
+      <div class="progress-item">
+        <span>Test9</span>
         <el-progress :percentage="100" status="success" />
       </div>
     </div>
@@ -28,11 +44,10 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import PanThumb from '@/components/PanThumb'
 import Mallki from '@/components/TextHoverEffect/Mallki'
 
 export default {
-  components: { PanThumb, Mallki },
+  components: { Mallki },
 
   filters: {
     statusFilter(status) {

@@ -49,7 +49,7 @@ export default {
         backgroundColor: '#394056',
         title: {
           top: 20,
-          text: 'Requests',
+          text: '利用率',
           textStyle: {
             fontWeight: 'normal',
             fontSize: 16,
@@ -71,7 +71,7 @@ export default {
           itemWidth: 14,
           itemHeight: 5,
           itemGap: 13,
-          data: ['CMCC', 'CTCC', 'CUCC'],
+          data: ['集群1', '集群2', '集群3'],
           right: '4%',
           textStyle: {
             fontSize: 12,
@@ -93,7 +93,7 @@ export default {
               color: '#57617B'
             }
           },
-          data: ['13:00', '13:05', '13:10', '13:15', '13:20', '13:25', '13:30', '13:35', '13:40', '13:45', '13:50', '13:55']
+          data: ['00:00', '03:00', '06:00', '09:00', '11:00', '13:00', '15:00', '17:00', '19:00', '20:00', '22:00', '23:00']
         }],
         yAxis: [{
           type: 'value',
@@ -119,7 +119,7 @@ export default {
           }
         }],
         series: [{
-          name: 'CMCC',
+          name: '集群1',
           type: 'line',
           smooth: true,
           symbol: 'circle',
@@ -151,9 +151,9 @@ export default {
 
             }
           },
-          data: [220, 182, 191, 134, 150, 120, 110, 125, 145, 122, 165, 122]
+          data: [20, 82, 90, 34, 50, 20, 11, 25, 45, 22, 65, 22]
         }, {
-          name: 'CTCC',
+          name: '集群2',
           type: 'line',
           smooth: true,
           symbol: 'circle',
@@ -185,9 +185,9 @@ export default {
 
             }
           },
-          data: [120, 110, 125, 145, 122, 165, 122, 220, 182, 191, 134, 150]
+          data: [20, 11, 25, 45, 22, 65, 22, 22, 82, 86, 34, 50]
         }, {
-          name: 'CUCC',
+          name: '集群3',
           type: 'line',
           smooth: true,
           symbol: 'circle',
@@ -218,7 +218,7 @@ export default {
               borderWidth: 12
             }
           },
-          data: [220, 182, 125, 145, 122, 191, 134, 150, 120, 110, 165, 122]
+          data: [22, 82, 25, 45, 22, 91, 34, 50, 20, 11, 65, 22]
         }]
       })
     }
